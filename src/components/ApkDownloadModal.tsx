@@ -32,10 +32,10 @@ export const ApkDownloadModal: React.FC<ApkDownloadModalProps> = ({ isOpen, onCl
             </div>
             <div>
               <h3 className="font-bold text-base text-white">
-                تحميل ملف التطبيق للأندرويد (.APK)
+                تحميل ملف التطبيق للأندرويد (.APK) - إصدار Android 10
               </h3>
               <p className="text-xs text-gray-400">
-                Téléchargement direct du fichier APK (Android 5.0 à 15+)
+                Build optimisé pour Android 10 (API 29) • Compatible Android 5.0 à 15+
               </p>
             </div>
           </div>
@@ -53,17 +53,20 @@ export const ApkDownloadModal: React.FC<ApkDownloadModalProps> = ({ isOpen, onCl
           {/* Main Download Card */}
           <div className="p-5 rounded-2xl bg-[#2b2a30] border border-gray-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="space-y-1 text-right w-full sm:w-auto">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="px-2.5 py-0.5 rounded-md bg-[#4CAF50]/20 text-[#4CAF50] font-mono text-[11px] font-bold">
-                  v1.0.0 (Prêt à l'installation)
+                  Android 10 (API 29) • v1.11.0
                 </span>
-                <span className="text-xs text-gray-400">الحجم: 217 كيلوبايت فقط</span>
+                <span className="px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-mono text-[11px] font-bold">
+                  تم حل مشكلة الشاشة البيضاء ✓
+                </span>
+                <span className="text-xs text-gray-400">الحجم: 225 Ko</span>
               </div>
               <h4 className="text-base font-bold text-white">
                 quiz-concours-tunisie.apk
               </h4>
               <p className="text-xs text-gray-300 leading-relaxed">
-                يحتوي على كافة الأسئلة الـ 300 ويعمل 100% دون اتصال بالإنترنت (Offline).
+                إصدار محدث ومُعدّل مع معالج داخلي (Asset Interceptor) يمنع الشاشة البيضاء ويضمن تشغيل الأسئلة الـ 300 فوراً بدون أي اتصال بالإنترنت.
               </p>
             </div>
 
@@ -99,8 +102,8 @@ export const ApkDownloadModal: React.FC<ApkDownloadModalProps> = ({ isOpen, onCl
               <div className="font-bold text-[#4CAF50] text-sm">غير مطلوب (Offline)</div>
             </div>
             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-              <div className="text-gray-400 mb-1">نظام أندرويد</div>
-              <div className="font-bold text-white text-sm">5.0 إلى 15+</div>
+              <div className="text-gray-400 mb-1">المستهدف (Target SDK)</div>
+              <div className="font-bold text-amber-400 text-sm">Android 10 (API 29)</div>
             </div>
             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
               <div className="text-gray-400 mb-1">التوقيع الأمني</div>

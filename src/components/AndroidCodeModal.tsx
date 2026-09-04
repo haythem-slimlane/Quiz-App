@@ -441,14 +441,14 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
 android {
     namespace = "com.example.quizapp"
-    compileSdk = 35
+    compileSdk = 29 // Android 10 (API 29)
 
     defaultConfig {
         applicationId = "com.example.quizapp"
-        minSdk = 24
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = 21
+        targetSdk = 29 // Android 10 (API 29)
+        versionCode = 3
+        versionName = "1.10.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

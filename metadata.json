@@ -1,0 +1,6 @@
+{
+  "name": "تطبيق مسابقة الثقافة العامة",
+  "description": "تطبيق اختبار ومسابقات بأسئلة الثقافة العامة والتاريخ التونسي باللغة العربية مع التحقق الفوري والنتائج",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

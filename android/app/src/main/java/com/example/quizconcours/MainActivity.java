@@ -60,6 +60,10 @@ public class MainActivity extends Activity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
+        String defaultUa = settings.getUserAgentString();
+        if (defaultUa != null) {
+            settings.setUserAgentString(defaultUa + " QuizAppNativeAndroid/1.12.0");
+        }
 
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
@@ -99,9 +103,9 @@ public class MainActivity extends Activity {
             }
         });
 
-        // Load virtual https://localhost domain.
+        // Load virtual https://localhost domain with mode=native_apk.
         // Intercepted locally from assets/www, ensuring NO CORS or file:// null origin block!
-        webView.loadUrl("https://localhost/index.html");
+        webView.loadUrl("https://localhost/index.html?mode=native_apk");
     }
 
     private WebResourceResponse handleAssetRequest(Uri uri) {

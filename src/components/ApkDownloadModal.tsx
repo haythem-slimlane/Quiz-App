@@ -55,10 +55,10 @@ export const ApkDownloadModal: React.FC<ApkDownloadModalProps> = ({ isOpen, onCl
             <div className="space-y-1 text-right w-full sm:w-auto">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="px-2.5 py-0.5 rounded-md bg-[#4CAF50]/20 text-[#4CAF50] font-mono text-[11px] font-bold">
-                  Android 10 (API 29) • v1.11.0
+                  Android 10 (API 29) • v1.12.0
                 </span>
                 <span className="px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-mono text-[11px] font-bold">
-                  تم حل مشكلة الشاشة البيضاء ✓
+                  واجهة شاشة كاملة بدون شريط علوي ✓
                 </span>
                 <span className="text-xs text-gray-400">الحجم: 225 Ko</span>
               </div>
@@ -66,7 +66,7 @@ export const ApkDownloadModal: React.FC<ApkDownloadModalProps> = ({ isOpen, onCl
                 quiz-concours-tunisie.apk
               </h4>
               <p className="text-xs text-gray-300 leading-relaxed">
-                إصدار محدث ومُعدّل مع معالج داخلي (Asset Interceptor) يمنع الشاشة البيضاء ويضمن تشغيل الأسئلة الـ 300 فوراً بدون أي اتصال بالإنترنت.
+                إصدار نقي لشاشة الهاتف كاملة (Full Screen)، تم حذف الشريط العلوي وشاشات المعاينة ليعمل كتطبيق أندرويد أصلي متكامل وسلس.
               </p>
             </div>
 

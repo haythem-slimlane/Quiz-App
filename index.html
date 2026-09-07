@@ -2,13 +2,27 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>تطبيق مسابقة الثقافة العامة</title>
     <meta name="description" content="تطبيق اختبار ومسابقات بأسئلة الثقافة العامة والتاريخ التونسي باللغة العربية مع التحقق الفوري والنتائج" />
     <meta property="og:title" content="تطبيق مسابقة الثقافة العامة" />
     <meta property="og:description" content="تطبيق اختبار ومسابقات بأسئلة الثقافة العامة والتاريخ التونسي باللغة العربية مع التحقق الفوري والنتائج" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        try {
+          var isApk = window.location.search.indexOf('mode=native_apk') !== -1 ||
+                      window.location.hostname === 'localhost' ||
+                      window.location.hostname === '127.0.0.1' ||
+                      navigator.userAgent.indexOf('QuizAppNativeAndroid') !== -1 ||
+                      navigator.userAgent.indexOf('wv') !== -1;
+          if (isApk) {
+            document.documentElement.classList.add('is-native-apk');
+          }
+        } catch(e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">

@@ -7,3 +7,14 @@
     -webkit-font-smoothing: antialiased;
   }
 }
+
+/* Hide web toolbar and frame when running inside native Android APK */
+.is-native-apk .web-preview-only {
+  display: none !important;
+}
+
+.is-native-apk body {
+  background-color: #ffffff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

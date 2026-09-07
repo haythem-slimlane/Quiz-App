@@ -5,9 +5,10 @@ import { motion } from 'motion/react';
 interface HomeScreenProps {
   onStartQuiz: (testNumber: number | 'all', count: number) => void;
   totalQuestions: number;
+  isNativeApp?: boolean;
 }
 
-export const HomeScreen: React.FC<HomeScreenProps> = ({ onStartQuiz, totalQuestions }) => {
+export const HomeScreen: React.FC<HomeScreenProps> = ({ onStartQuiz, totalQuestions, isNativeApp }) => {
   const [selectedTest, setSelectedTest] = React.useState<number | 'all'>(1);
   const [questionCount, setQuestionCount] = React.useState<number>(10);
 
@@ -114,15 +115,17 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onStartQuiz, totalQuesti
           ابدأ الاختبار الآن
         </button>
 
-        <a
-          id="btn-download-apk-direct"
-          href="/quiz-concours-tunisie.apk"
-          download="quiz-concours-tunisie.apk"
-          className="w-full py-2.5 px-3 bg-gray-100 hover:bg-gray-200 active:scale-95 text-[#1c1b1f] font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer border border-gray-200/80"
-        >
-          <Download className="w-3.5 h-3.5 text-[#4CAF50]" />
-          <span>تحميل تطبيق APK للأندرويد (217 Ko • Offline)</span>
-        </a>
+        {!isNativeApp && (
+          <a
+            id="btn-download-apk-direct"
+            href="/quiz-concours-tunisie.apk"
+            download="quiz-concours-tunisie.apk"
+            className="w-full py-2.5 px-3 bg-gray-100 hover:bg-gray-200 active:scale-95 text-[#1c1b1f] font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer border border-gray-200/80"
+          >
+            <Download className="w-3.5 h-3.5 text-[#4CAF50]" />
+            <span>تحميل تطبيق APK للأندرويد (225 Ko • Offline)</span>
+          </a>
+        )}
       </div>
     </div>
   );
